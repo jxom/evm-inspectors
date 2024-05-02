@@ -416,6 +416,7 @@ impl std::fmt::Display for CallKind {
 impl From<CallScheme> for CallKind {
     fn from(scheme: CallScheme) -> Self {
         match scheme {
+            CallScheme::AuthCall => Self::AuthCall,
             CallScheme::Call => Self::Call,
             CallScheme::StaticCall => Self::StaticCall,
             CallScheme::CallCode => Self::CallCode,
